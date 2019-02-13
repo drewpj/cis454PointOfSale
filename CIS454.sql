@@ -1,5 +1,5 @@
 -- CIS454 Project 1 Database
-
+-- azure
 -- DROP TABLE User454
 -- DROP TABLE Product454
 -- DROP TABLE Payment454
@@ -11,17 +11,26 @@ CREATE TABLE User454 (
 	user_name varchar(50) not null 
 )
 
-INSERT INTO User454 (user_card, user_name) 
-	VALUES (1, 'user1'),
-			(2, 'user2'),
-			(3, 'user3'),
-			(4, 'user4'),
-			(5, 'user5')
+INSERT INTO User454 (user_card, user_name, user_password)
+	VALUES (1, 'user1', PWDENCRYPT('thisisme')),
+			(2, 'user2', PWDENCRYPT('hellothere')),
+			(3, 'user3', PWDENCRYPT('yeet')),
+			(4, 'user4', PWDENCRYPT('esketit')),
+			(5, 'user5', PWDENCRYPT('getthisbread'))
 	
-
 ALTER TABLE User454 
 	ADD CONSTRAINT PK_user_id PRIMARY KEY (userid),
-		CONSTRAINT FK_user_card FOREIGN KEY (user_card) REFERENCES Payment454(credit_id)
+		CONSTRAINT FK_user_card FOREIGN KEY (user_card) REFERENCES Payment454(credit_id),
+
+ALTER TABLE User454
+	ADD user_password nvarchar(50)
+
+INSERT INTO User454 (user_password)
+	VALUES ('thisisme'),
+			('hellothere'),
+			('yeet'),
+			('esketit'),
+			('getthisbread')
 
 CREATE TABLE Product454 (
 	product_id int IDENTITY not null,
@@ -81,6 +90,9 @@ INSERT INTO Vendor454 (products_sold, vendor_user_id, vendor_name, vendor_email)
 			(6, 3, 'Seller2', 'Seller2@gmail.com'),
 			(6, 5, 'Seller3', 'Seller3@gmail.com') 
 
+UPDATE Vendor454
+	Set vendor_user_id = vendor_user_id + 18
+	
 ALTER TABLE Vendor454
 	ADD CONSTRAINT PK_vendor_name PRIMARY KEY (vendor_name),
 		CONSTRAINT FK_vendor_user_id FOREIGN KEY (vendor_user_id) REFERENCES User454(userid)
