@@ -89,9 +89,6 @@ INSERT INTO Vendor454 (products_sold, vendor_user_id, vendor_name, vendor_email)
 	VALUES (3, 2, 'Seller1', 'Seller1@gmail.com'), 
 			(6, 3, 'Seller2', 'Seller2@gmail.com'),
 			(6, 5, 'Seller3', 'Seller3@gmail.com') 
-
-UPDATE Vendor454
-	Set vendor_user_id = vendor_user_id + 18
 	
 ALTER TABLE Vendor454
 	ADD CONSTRAINT PK_vendor_name PRIMARY KEY (vendor_name),
