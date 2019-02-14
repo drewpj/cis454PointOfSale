@@ -1,5 +1,5 @@
 -- CIS454 Project 1 Database
--- azure
+ 
 -- DROP TABLE User454
 -- DROP TABLE Product454
 -- DROP TABLE Payment454
@@ -12,17 +12,6 @@ CREATE TABLE User454 (
     user_password nvarchar(50) not null 
 )
 
-INSERT INTO User454 (user_card, user_name, user_password)
-	VALUES (1, 'user1', PWDENCRYPT('thisisme')),
-			(2, 'user2', PWDENCRYPT('hellothere')),
-			(3, 'user3', PWDENCRYPT('yeet')),
-			(4, 'user4', PWDENCRYPT('esketit')),
-			(5, 'user5', PWDENCRYPT('getthisbread'))
-	
-ALTER TABLE User454 
-	ADD CONSTRAINT PK_user_id PRIMARY KEY (userid),
-		CONSTRAINT FK_user_card FOREIGN KEY (user_card) REFERENCES Payment454(credit_id)
-
 CREATE TABLE Product454 (
 	product_id int IDENTITY not null,
 	product_name varchar(50) not null,
@@ -30,8 +19,28 @@ CREATE TABLE Product454 (
 	product_seller varchar(50) not null
 )
 
-ALTER TABLE Product454 ADD
-	CONSTRAINT FK_seller FOREIGN KEY (product_seller) REFERENCES Vendor454(vendor_name)
+CREATE TABLE Payment454 (
+	credit_id int IDENTITY not null,
+	is_card_debit bit not null,
+	card_number int not null,
+	card_holder_name varchar(50) not null,
+	card_holder_suid int not null,
+	total_price decimal(5,2) not null
+)
+
+CREATE TABLE Vendor454 (
+	products_sold int not null,
+	vendor_user_id int not null,
+	vendor_name varchar(50) not null,
+	vendor_email varchar(50) not null
+)
+
+INSERT INTO User454 (user_card, user_name, user_password)
+	VALUES (1, 'user1', PWDENCRYPT('thisisme')),
+			(2, 'user2', PWDENCRYPT('hellothere')),
+			(3, 'user3', PWDENCRYPT('yeet')),
+			(4, 'user4', PWDENCRYPT('esketit')),
+			(5, 'user5', PWDENCRYPT('getthisbread'))
 
 INSERT INTO Product454 (product_name, product_price, product_seller)
 	VALUES ('Eggs on Toast with Fruit', 16.50, 'Seller1'), --seller1 is breakfast
@@ -50,18 +59,6 @@ INSERT INTO Product454 (product_name, product_price, product_seller)
 			('Spaghetti Bolognaise', 27.00, 'Seller2'),
 			('Garden Pizza', 19.00, 'Seller2')
 
-CREATE TABLE Payment454 (
-	credit_id int IDENTITY not null,
-	is_card_debit bit not null,
-	card_number int not null,
-	card_holder_name varchar(50) not null,
-	card_holder_suid int not null,
-	total_price decimal(5,2) not null
-)
-
-ALTER TABLE Payment454
-	ADD CONSTRAINT PK_credit_id PRIMARY KEY (credit_id)
-
 INSERT INTO Payment454 (is_card_debit, card_number, card_holder_name, card_holder_suid, total_price)
 	VALUES (1, 1234, 'Matthew', 111222333, 050.00),
 			(0, 4321, 'Jon', 222333444, 040.00),
@@ -69,23 +66,26 @@ INSERT INTO Payment454 (is_card_debit, card_number, card_holder_name, card_holde
 			(0, 8765, 'Drew', 444555666, 103.00),
 			(1, 9000, 'Natalie', 555666777, 67.00)
 
-CREATE TABLE Vendor454 (
-	products_sold int not null,
-	vendor_user_id int not null,
-	vendor_name varchar(50) not null,
-	vendor_email varchar(50) not null
-)
-
 INSERT INTO Vendor454 (products_sold, vendor_user_id, vendor_name, vendor_email)
 	VALUES (3, 2, 'Seller1', 'Seller1@gmail.com'), 
 			(6, 3, 'Seller2', 'Seller2@gmail.com'),
 			(6, 5, 'Seller3', 'Seller3@gmail.com') 
 	
+ALTER TABLE Payment454
+	ADD CONSTRAINT PK_credit_id PRIMARY KEY (credit_id)
+
+ALTER TABLE User454 
+	ADD CONSTRAINT PK_user_id PRIMARY KEY (userid),
+		CONSTRAINT FK_user_card FOREIGN KEY (user_card) REFERENCES Payment454(credit_id)
+
 ALTER TABLE Vendor454
 	ADD CONSTRAINT PK_vendor_name PRIMARY KEY (vendor_name),
 		CONSTRAINT FK_vendor_user_id FOREIGN KEY (vendor_user_id) REFERENCES User454(userid)
 
-SELECT * FROM User454
-SELECT * FROM Product454
-SELECT * FROM Payment454
-SELECT * FROM Vendor454
+ALTER TABLE Product454 ADD
+	CONSTRAINT FK_seller FOREIGN KEY (product_seller) REFERENCES Vendor454(vendor_name)
+
+-- SELECT * FROM User454
+-- SELECT * FROM Product454
+-- SELECT * FROM Payment454
+-- SELECT * FROM Vendor454
