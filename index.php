@@ -2,7 +2,7 @@
     include_once 'db.php';
 ?>
 
-<!DOCTYLE html>
+<!DOCSTYLE html>
 <html>
         <head>
             <meta charset="UTF-8">
