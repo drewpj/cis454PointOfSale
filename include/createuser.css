@@ -1,0 +1,10 @@
+body > form {
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin: 5px auto 10px auto;
+}
+
+body > form > h3 {
+    font-size: 14px;
+}
