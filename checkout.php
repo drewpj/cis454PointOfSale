@@ -28,7 +28,7 @@
 	
 	$shipping = "\nShipping information:\n" . $name . " " . $familyname . $nl . $email . $nl . $phone . $nl . $addr . $nl . $zip;
 	$billing = "\nBilling information:\n" . $nameB . " " . $familynameB . $nl . $phoneB . $nl . $addrB . $nl . $zipB;
-	$charged = "\n$" . $amount . "charged to x". substr($ccn,-4);
+	$charged = "\n\n$" . $amount . " charged to x". substr($ccn,-4);
 	echo nl2br($shipping . $nl);
 	echo nl2br($billing);
 	echo nl2br($charged);
