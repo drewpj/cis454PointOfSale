@@ -28,7 +28,7 @@ $sql = "SELECT user_firstname, user_lastname, user_email FROM dbo.User454 WHERE 
 //SELECT * FROM User454 WHERE user_email='janedoe@gmail.com' and PWDCOMPARE('hellothere', user_password) = 1
 $result = sqlsrv_query($conn, $sql);
 echo ("Reading data from table" . PHP_EOL);
-if (sqlsrv_num_rows($result) == 1) {
+if (sqlsrv_has_rows($result)) {
     echo("queried succesfully");
     $_SESSION['username'] = $uid;
 } else {
@@ -36,6 +36,7 @@ if (sqlsrv_num_rows($result) == 1) {
 }
 
 if ($result == FALSE)
+    echo
     die(FormatErrors(sqlsrv_errors()));
 while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
     echo ($row['user_firstname'] . " " . $row['user_lastname'] . " " . $row['user_email'] . PHP_EOL);
