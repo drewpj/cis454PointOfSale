@@ -10,7 +10,7 @@ while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
 			$price = $row['product_price'];
 			$name = $row['product_name'];
     }
-    sqlsrv_free_stmt($result);
+    //sqlsrv_free_stmt($result);
      }
 //$total = $total + $price;
 //$conn->close();
