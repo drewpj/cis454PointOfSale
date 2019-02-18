@@ -4,7 +4,7 @@
 	
 	echo "Print this recipt out for your records\n";
 	
-	$amount = 45;
+	$amount = $_SESSION['total'];
 	$nl = "\n";
 	$name = $_POST['name'];
 	$familyname = $_POST['familyname'];
