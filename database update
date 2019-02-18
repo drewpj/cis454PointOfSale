@@ -1,0 +1,4 @@
+ALTER TABLE User454 DROP CONSTRAINT FK_user_card
+
+INSERT INTO User454 (user_type, user_card, user_firstname, user_lastname, user_email, user_password)
+        VALUES ('Customer', 6, 'name', 'last', 'yeet', 'hello')
