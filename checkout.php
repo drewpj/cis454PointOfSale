@@ -1,8 +1,5 @@
 <?php
 	require 'processCard.php';
-	//var_dump($_POST);
-	
-	echo "Print this recipt out for your records\n";
 	
 	$amount = $_SESSION['total'];
 	
@@ -32,6 +29,7 @@
 	$charged = "\n\n$" . $amount . " charged to x". substr($ccn,-4);
 	
 	if (processCard($nameCard,$cnn,$ccv,$exp_m,$exp_y)){
+	echo "Print this recipt out for your records\n";
 	echo nl2br($shipping . $nl);
 	echo nl2br($billing);
 	echo nl2br($charged);
