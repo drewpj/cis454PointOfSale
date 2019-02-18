@@ -21,7 +21,7 @@ $user_email = $_POST['email'];
 $user_password = $_POST['pwd'];
 
 //hellothere
-$sql = "SELECT user_firstname, user_lastname FROM dbo.User454 WHERE user_email='$user_email' AND PWDCOMPARE(N'$user_password', user_password)"; //AND PWDCOMPARE(N'$pwd', user_password) = 1";
+$sql = "SELECT user_firstname, user_lastname FROM dbo.User454 WHERE user_email='$user_email' AND PWDCOMPARE(N'$user_password', user_password) = 1"; //AND PWDCOMPARE(N'$pwd', user_password) = 1";
 //SELECT * FROM User454 WHERE user_email='janedoe@gmail.com' and PWDCOMPARE('hellothere', user_password) = 1
 $result = sqlsrv_query($conn, $sql);
 echo ("Reading data from table" . PHP_EOL);
