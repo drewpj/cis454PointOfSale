@@ -1,13 +1,13 @@
 <?php 
 session_start();
 $serverName = "samp454.database.windows.net"; // update me
-    $connectionOptions = array(
+$connectionOptions = array(
         "Database" => "CIS454", // update me
         "Uid" => "JGPrish", // update me
         "PWD" => "password!9" // update me
-    );
-    //Establishes the connection
-    $conn = sqlsrv_connect($serverName, $connectionOptions);
+);
+//Establishes the connection
+$conn = sqlsrv_connect($serverName, $connectionOptions);
 
 // $uid = mysqli_real_escape_string($conn,$_POST['email']);
 // $pwd = mysqli_real_escape_string($conn,$_POST['pwd']);
