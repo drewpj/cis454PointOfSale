@@ -13,7 +13,6 @@ $user_password = mysqli_real_escape_string($conn,$_POST['pwd']);
 $sql = "INSERT INTO dbo.User454 (user_type, user_card, user_firstname, user_lastname, user_email, user_password) VALUES ('$user_type', '$user_card', '$user_firstname', '$user_lastname', '$user_email', '$user_password')";
 $result = sqlsrv_query($conn, $sql);
 
-echo($result)
 if ($result) {
     header("Location: index.php?signup=success");
 } else {
