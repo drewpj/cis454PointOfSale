@@ -10,7 +10,7 @@ $connectionOptions = array(
 $conn = sqlsrv_connect($serverName, $connectionOptions);
  if($conn)
         echo "Connected!"
-?>
+
 
 
 // $uid = mysqli_real_escape_string($conn,$_POST['email']);
@@ -30,6 +30,8 @@ while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
     echo ($row['user_firstname'] . " " . $row['user_lastname'] . " " . $row['user_email'] . PHP_EOL);
 
 }
+
+
 
 
 
