@@ -11,7 +11,7 @@ $user_email = mysqli_real_escape_string($conn,$_POST['email']);
 $user_password = mysqli_real_escape_string($conn,$_POST['pwd']);
 
 // $sql = "INSERT INTO dbo.User454 (user_type, user_card, user_firstname, user_lastname, user_email, user_password) VALUES ('$user_type', '$user_card', '$user_firstname', '$user_lastname', '$user_email', '$user_password')";
-$sql = "INSERT INTO dbo.User454 VALUES (1,'$user_type', '$user_card', '$user_firstname', '$user_lastname', '$user_email', '$user_password')";
+$sql = "INSERT INTO dbo.User454 VALUES ('$user_type', '$user_card', '$user_firstname', '$user_lastname', '$user_email', '$user_password')";
 $result = sqlsrv_query($conn, $sql);
 
 if ($result) {
