@@ -1,5 +1,5 @@
 <?php 
-
+echo "running code";
 $serverName = "samp454.database.windows.net"; 
     $connectionOptions = array(
         "Database" => "CIS454", 
