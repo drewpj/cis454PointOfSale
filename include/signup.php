@@ -1,7 +1,7 @@
 <?php 
 //include config file for db connection.
 include_once 'db.php';
-echo "got down here"
+
 #Store inputs from the form in php variables.
 $user_type = "customer";
 $user_card = 123456789;
