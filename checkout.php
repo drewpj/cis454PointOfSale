@@ -1,5 +1,5 @@
 <?php
-
+	require 'processCard.php';
 	//var_dump($_POST);
 	
 	echo "Print this recipt out for your records\n";
@@ -29,8 +29,16 @@
 	$shipping = "\nShipping information:\n" . $name . " " . $familyname . $nl . $email . $nl . $phone . $nl . $addr . $nl . $zip;
 	$billing = "\nBilling information:\n" . $nameB . " " . $familynameB . $nl . $phoneB . $nl . $addrB . $nl . $zipB;
 	$charged = "\n\n$" . $amount . " charged to x". substr($ccn,-4);
+	
+	if (processCard($nameCard,$cnn,$ccv,$exp_m,$exp_y)){
+		
+	
 	echo nl2br($shipping . $nl);
 	echo nl2br($billing);
 	echo nl2br($charged);
+	} else {
+		
+		echo nl2br("Processing card failed. Are you sure your information is correct?\n");
+	}
 	
 ?>
