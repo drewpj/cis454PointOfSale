@@ -31,7 +31,7 @@ echo ("Reading data from table" . PHP_EOL);
 if (sqlsrv_has_rows($result)) {
     $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
     echo("queried succesfully");
-    $_SESSION['name'] = $row['user_firstname'] . $row['user_lastname'];
+    $_SESSION['email'] = $user_email;
 } else {
 	echo("yerr this boy no work");
 }
