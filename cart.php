@@ -1,5 +1,5 @@
 <?php
-include_once 'include/db.php';
+//include_once 'include/db.php';
 $serverName = "samp454.database.windows.net"; 
     $connectionOptions = array(
         "Database" => "CIS454", 
