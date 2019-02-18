@@ -132,35 +132,131 @@
 
 	</header>
 
-	<!-- content page -->
+
+<!-- login part -->
 	<section class="bgwhite p-t-66 p-b-60">
 		<div class="container">
 				<div class="col-md-6 p-b-30">
-					<form class="leave-comment" action="http://example.com" method="get">
-						<h4 class="m-text26 p-b-36 p-t-15">
-							Send us your message
+					<form class="leave-comment">
+						<h4 class="m-text15 p-b-20 p-t-5">
+							First Name	
 						</h4>
 
-						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Full Name">
-						</div>
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="phone-number" placeholder="Phone Number">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="First Name">
 						</div>
+
+
+
+						<h4 class="m-text15 p-b-20 p-t-5">
+							Family Name	
+						</h4>
+
 
 						<div class="bo4 of-hidden size15 m-b-20">
-							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="email" placeholder="Email Address">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Family Name">
 						</div>
 
-						<textarea class="dis-block s-text7 size20 bo4 p-l-22 p-r-22 p-t-13 m-b-20" name="message" placeholder="Message"></textarea>
+
+
+						<h4 class="m-text15 p-b-20 p-t-40">
+							Password	
+						</h4>
+
+
+						<div class="bo4 of-hidden size15 m-b-20">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Password">
+						</div>
+
+
+
+						<h4 class="m-text15 p-b-20 p-t-5">
+							Retype Password	
+						</h4>
+
+
+						<div class="bo4 of-hidden size15 m-b-20">
+							<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="name" placeholder="Retype Password">
+						</div>
+
+
+
+
+						<h4 class="m-text15 p-b-20 p-t-40">
+							Date of Birthday (No Matter How Old You Are!)
+						</h4>
+
+					<div class="flex-sb-m flex-w p-b-35">
+						<div class="flex-w">
+							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
+								<select class="selection-2" name="sorting">
+									<option>Month</option>
+									<option>January</option>
+									<option>February</option>
+									<option>March</option>
+									<option>April</option>
+									<option>May</option>
+									<option>June</option>
+									<option>July</option>
+									<option>August</option>
+									<option>September</option>
+									<option>October</option>
+									<option>November</option>
+									<option>December</option>
+								</select>
+							</div>
+
+							<div class="rs2-select2 bo4 of-hidden w-size12 m-t-5 m-b-5 m-r-10">
+								<select class="selection-2" name="sorting">
+									<option>Day</option>
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+									<option>04</option>
+									<option>05</option>
+									<option>06</option>
+									<option>07</option>
+									<option>08</option>
+									<option>09</option>
+									<option>10</option>
+									<option>11</option>
+									<option>12</option>
+									<option>13</option>
+									<option>14</option>
+									<option>15</option>
+									<option>16</option>
+									<option>17</option>
+									<option>18</option>
+									<option>19</option>
+									<option>20</option>
+									<option>21</option>
+									<option>22</option>
+									<option>23</option>
+									<option>24</option>
+									<option>25</option>
+									<option>26</option>
+									<option>27</option>
+									<option>28</option>
+									<option>29</option>
+									<option>30</option>
+									<option>31</option>
+
+								</select>
+							</div>
+						</div>
+
+					</div>
+
+
 
 						<div class="w-size25">
 							<!-- Button -->
-							<button class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
-								Send
-							</button>
+							<a href="login2.html" class="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
+								Create Account
+							</a>
 						</div>
+
 					</form>
 				</div>
 			</div>
@@ -168,7 +264,14 @@
 	</section>
 
 
-	<!-- Footer -->
+
+
+
+
+
+
+
+<!-- Footer -->
 	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
 		<div class="flex-w p-b-90">
 		</div>
@@ -206,6 +309,14 @@
 	</footer>
 
 
+
+	<!-- Container Selection -->
+	<div id="dropDownSelect1"></div>
+	<div id="dropDownSelect2"></div>
+
+
+
+
 <!--===============================================================================================-->
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 <!--===============================================================================================-->
@@ -231,11 +342,6 @@
 	<script src="js/map-custom.js"></script>
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
-	<script>
-	
-	function submitContact() {
-		alert("the contact form was submitted");
-	}
-	</script>
+
 </body>
 </html>
