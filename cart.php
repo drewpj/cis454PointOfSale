@@ -1,26 +1,18 @@
 <?php
-//include_once 'include/db.php';
-$serverName = "samp454.database.windows.net"; 
-    $connectionOptions = array(
-        "Database" => "CIS454", 
-        "Uid" => "JGPrish", 
-        "PWD" => "password!9" 	
-	);
+include_once 'include/db.php';
 
-$conn = sqlsrv_connect($serverName, $connectionOptions) or DIE("Failed to connect to database");
-
-//$id = $_GET['id'];	
+$id = $_GET['id'];	
 $sql = "SELECT * FROM dbo.Product454";
 $result = sqlsrv_query($conn,$sql);
 while ($row = $result->fetch_assoc()) {
 	//echo($row['product_name']; 
-    if ($row['product_id'] == 1){
+    if ($row['product_id'] == $id){
 			$price = $row['product_price'];
 			$name = $row['product_name'];
     }
     sqlsrv_free_stmt($getResults);
      }
-$total = $total + $price;
+//$total = $total + $price;
 //$conn->close();
 
 /*
