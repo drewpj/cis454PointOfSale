@@ -187,8 +187,8 @@ $total should be updated using $price and i meant to be displayed.
 									<img src="images/item-cart-01.jpg" alt="IMG-PRODUCT">
 								</div>
 							</td>
-							<td class="column-2"><?php echo($name);?></td>
-							<td class="column-3"><?php echo($price);?></td>
+							<td class="column-2"><?php echo($_GET['name']);?></td>
+							<td class="column-3"><?php echo($_GET['price']);?></td>
 							<td class="column-4">
 								<div class="flex-w bo5 of-hidden w-size17">
 									<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
