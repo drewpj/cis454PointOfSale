@@ -20,28 +20,19 @@ $conn = sqlsrv_connect($serverName, $connectionOptions);
 $user_email = $_GET['email'];
 $user_password = $_GET['pwd'];
 
-echo($user_email);
-echo($user_password);
 //hellothere
 $sql = "SELECT user_firstname, user_lastname, user_email FROM dbo.User454 WHERE user_email='$user_email' AND PWDCOMPARE('$user_password', user_password) = 1"; //AND PWDCOMPARE(N'$pwd', user_password) = 1";
 //$sql = "SELECT user_firstname, user_lastname FROM dbo.User454 WHERE user_email='johndoe@gmail.com' AND PWDCOMPARE('thisisme', user_password) = 1"; //AND PWDCOMPARE(N'$pwd', user_password) = 1";
 //SELECT * FROM User454 WHERE user_email='janedoe@gmail.com' and PWDCOMPARE('hellothere', user_password) = 1
 $result = sqlsrv_query($conn, $sql);
-echo ("Reading data from table" . PHP_EOL);
 if (sqlsrv_has_rows($result)) {
     $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
-    echo("queried succesfully");
+    echo("Logged in successfully!");
     $_SESSION['email'] = $user_email;
 } else {
-	echo("yerr this boy no work");
+	echo("Wrong password or username!");
 }
 
-if ($result == FALSE)
-    echo
-    die(FormatErrors(sqlsrv_errors()));
-while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
-    echo ($row['user_firstname'] . " " . $row['user_lastname'] . " " . $row['user_email'] . PHP_EOL);
-}
 
 
 

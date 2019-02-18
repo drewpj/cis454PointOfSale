@@ -1,4 +1,5 @@
 <?php 
+session_start();
 //include config file for db connection.
 include_once 'db.php';
 

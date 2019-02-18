@@ -1,9 +1,9 @@
 <?php 
     session_start();
     include_once 'db.php';
-    if (isset($_SESSION['username'])) {
-        $user = $_SESSION['username']; 
-        echo(" <h1> hi $user </h1> <br>");
+    if (isset($_SESSION['email'])) {
+        $user = $_SESSION['email']; 
+        echo(" <h1> you have successfully logged in with the email: $user </h1> <br>");
     }
 ?>
 
