@@ -1,14 +1,17 @@
 -- CIS454 Project 1 Database
  
 -- DROP TABLE User454
--- DROP TABLE Product454
+-- DROP TABLE Product454 
 -- DROP TABLE Payment454
 -- DROP TABLE Vendor454
 
 CREATE TABLE User454 (
 	userid int IDENTITY not null,
+	user_type varchar(50) not null,
 	user_card int not null,
-	user_name varchar(50) not null,
+	user_firstname varchar(50) not null,
+	user_lastname varchar(50) not null,
+	user_email varchar(50) not null,
     user_password nvarchar(50) not null 
 )
 
@@ -30,17 +33,16 @@ CREATE TABLE Payment454 (
 
 CREATE TABLE Vendor454 (
 	products_sold int not null,
-	vendor_user_id int not null,
 	vendor_name varchar(50) not null,
 	vendor_email varchar(50) not null
 )
 
-INSERT INTO User454 (user_card, user_name, user_password)
-	VALUES (1, 'user1', PWDENCRYPT('thisisme')),
-			(2, 'user2', PWDENCRYPT('hellothere')),
-			(3, 'user3', PWDENCRYPT('yeet')),
-			(4, 'user4', PWDENCRYPT('esketit')),
-			(5, 'user5', PWDENCRYPT('getthisbread'))
+INSERT INTO User454 (user_type, user_card, user_firstname, user_lastname, user_email, user_password)
+	VALUES ('Manager', 1, 'John', 'Doe', 'johndoe@gmail.com', PWDENCRYPT('thisisme')),
+			('Customer', 2, 'Jane', 'Doe', 'janedoe@gmail.com', PWDENCRYPT('hellothere')),
+			('Customer', 3, 'LeBron', 'James', 'lbj@gmail.com', PWDENCRYPT('yeet')),
+			('Customer', 4, 'Pac', 'Man', 'pacman@yahoo.com', PWDENCRYPT('esketit')),
+			('Manager', 5, 'Mario', 'Bro', 'mariobro@yahoo.com', PWDENCRYPT('getthisbread'))
 
 INSERT INTO Product454 (product_name, product_price, product_seller)
 	VALUES ('Eggs on Toast with Fruit', 16.50, 'Seller1'), --seller1 is breakfast
@@ -66,10 +68,10 @@ INSERT INTO Payment454 (is_card_debit, card_number, card_holder_name, card_holde
 			(0, 8765, 'Drew', 444555666, 103.00),
 			(1, 9000, 'Natalie', 555666777, 67.00)
 
-INSERT INTO Vendor454 (products_sold, vendor_user_id, vendor_name, vendor_email)
-	VALUES (3, 2, 'Seller1', 'Seller1@gmail.com'), 
-			(6, 3, 'Seller2', 'Seller2@gmail.com'),
-			(6, 5, 'Seller3', 'Seller3@gmail.com') 
+INSERT INTO Vendor454 (products_sold, vendor_name, vendor_email)
+	VALUES (3, 'Seller1', 'Seller1@gmail.com'), 
+			(6, 'Seller2', 'Seller2@gmail.com'),
+			(6, 'Seller3', 'Seller3@gmail.com') 
 	
 ALTER TABLE Payment454
 	ADD CONSTRAINT PK_credit_id PRIMARY KEY (credit_id)
@@ -79,8 +81,7 @@ ALTER TABLE User454
 		CONSTRAINT FK_user_card FOREIGN KEY (user_card) REFERENCES Payment454(credit_id)
 
 ALTER TABLE Vendor454
-	ADD CONSTRAINT PK_vendor_name PRIMARY KEY (vendor_name),
-		CONSTRAINT FK_vendor_user_id FOREIGN KEY (vendor_user_id) REFERENCES User454(userid)
+	ADD CONSTRAINT PK_vendor_name PRIMARY KEY (vendor_name)
 
 ALTER TABLE Product454 ADD
 	CONSTRAINT FK_seller FOREIGN KEY (product_seller) REFERENCES Vendor454(vendor_name)
