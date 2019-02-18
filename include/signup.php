@@ -3,12 +3,18 @@
 include_once 'db.php';
 
 #Store inputs from the form in php variables.
-$first = mysqli_real_escape_string($conn,$_POST['first']);
-$last = mysqli_real_escape_string($conn,$_POST['last']);
-$email = mysqli_real_escape_string($conn,$_POST['email']);
-$uid = mysqli_real_escape_string($conn,$_POST['uid']);
-$pwd = mysqli_real_escape_string($conn,$_POST['pwd']);
+$user_type = "customer";
+$user_card = 123456789;
+$user_firstname = mysqli_real_escape_string($conn,$_POST['first']);
+$user_lastname = mysqli_real_escape_string($conn,$_POST['last']);
+$user_email = mysqli_real_escape_string($conn,$_POST['email']);
+$user_password = mysqli_real_escape_string($conn,$_POST['pwd']);
 
-$sql = "insert into users (user_first, user_last, user_email, user_uid, user_pwd) values ('$first', '$last', '$email', '$uid', '$pwd')";
-mysqli_query($conn, $sql);
-header("Location: index.php?signup=success");
+$sql = "INSERT into dbo.User454 (user_type, user_card, user_firstname, user_lastname, user_email, user_password) VALUES ('$user_type', '$user_card', '$user_firstname', '$user_lastname', '$user_email', '$user_password')";
+$result = mysqli_query($conn, $sql);
+
+if ($result) {
+    header("Location: index.php?signup=success");
+} else {
+    header("Location: index.php?signup=error");
+}
