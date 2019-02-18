@@ -30,13 +30,13 @@ while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
     echo ($row['user_firstname'] . " " . $row['user_lastname'] . " " . $row['user_email'] . PHP_EOL);
 
 }
-<!-- 
+/* 
 if (sqlsrv_num_rows($result) == 1) {
     $_SESSION['username'] = $uid;
     header('location: index.php?login=success');
 } else {
     header('location: index.php?login=error');
-} -->
+} */
 
 
 
