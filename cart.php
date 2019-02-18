@@ -7,12 +7,12 @@ $result = sqlsrv_query($conn,$sql);
 while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
 	//echo($row['product_name']; 
     if ($row['product_id'] === $id){
-			$price = $row['product_price'];
-			$name = $row['product_name'];
+			$GLOBALS['price'] = $row['product_price'];
+			$GLOBALS['name'] = $row['product_name'];
     }
     //sqlsrv_free_stmt($result);
      }
-//$total = $total + $price;
+$total = $total + $price;
 //$conn->close();
 
 /*
