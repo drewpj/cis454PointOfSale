@@ -24,8 +24,8 @@
 	$ccv = $_POST['ccv'];
 	//echo "\n\n\n\n\n" . $ccn . $addrB . $familyname;
 	
-	$shipping = "Shipping information:\n" . $nl . $name . " " . $familyname . $nl . $email . $phone . $addr . $nl . $zip;
-	$billing = "Billing information:\n" . $nl . $nameB . " " . $familynameB . $nl . $phoneB . $addrB . $nl . $zipB;
+	$shipping = "Shipping information:\n" . $name . " " . $familyname . $nl . $email . $phone . $addr . $nl . $zip;
+	$billing = "Billing information:\n" . $nameB . " " . $familynameB . $nl . $phoneB . $addrB . $nl . $zipB;
 	
 	echo nl2br($shipping . $nl);
 	echo nl2br($billing);
