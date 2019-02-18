@@ -8,8 +8,9 @@
     //Establishes the connection
     $conn = sqlsrv_connect($serverName, $connectionOptions);
     //$tsql= "SELECT * FROM dbo.Product454";
-    $tsql= "SELECT * FROM dbo.User454 WHERE user_email='moonmahbubar@gmail.com'";
+    $tsql= "SELECT * FROM dbo.User454";
     $getResults= sqlsrv_query($conn, $tsql);
+    echo($getResults);
     echo ("Reading data from table" . PHP_EOL);
     if ($getResults == FALSE)
         echo (sqlsrv_errors());
