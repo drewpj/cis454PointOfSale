@@ -20,7 +20,7 @@ $conn = sqlsrv_connect($serverName, $connectionOptions);
 $user_email = $_GET['email'];
 $user_password = $_GET['pwd'];
 
-echo($user_password);
+echo($user_email);
 echo($user_password);
 //hellothere
 $sql = "SELECT user_firstname, user_lastname FROM dbo.User454 WHERE user_email='$user_email' AND PWDCOMPARE('$user_password', user_password) = 1"; //AND PWDCOMPARE(N'$pwd', user_password) = 1";
