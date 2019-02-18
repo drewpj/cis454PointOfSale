@@ -15,7 +15,7 @@
         echo (sqlsrv_errors());
     while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC)) {
      //echo ($row['product_name'] . " " . $row['product_id'] . PHP_EOL);
-     echo ($row['user_firstname'] . " " . $row['user_lastname'] . PHP_EOL);
+     echo ($row['user_email'] . " " . $row['user_password'] . PHP_EOL);
     }
     sqlsrv_free_stmt($getResults);
 ?>
