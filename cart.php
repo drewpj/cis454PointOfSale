@@ -1,5 +1,13 @@
 <?php
-    include_once 'include/db.php';
+    //include_once 'include/db.php';
+$serverName = "samp454.database.windows.net"; 
+    $connectionOptions = array(
+        "Database" => "CIS454", 
+        "Uid" => "JGPrish", 
+        "PWD" => "password!9" 	
+	);
+
+ $conn = sqlsrv_connect($serverName, $connectionOptions) or DIE("Failed to connect to database");
 $id = $_GET['id'];	
 $sql = "SELECT * FROM dbo.Product454";
 $result = sqlsrv_query($conn,$sql);
