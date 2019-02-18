@@ -29,8 +29,9 @@ $sql = "SELECT user_firstname, user_lastname, user_email FROM dbo.User454 WHERE 
 $result = sqlsrv_query($conn, $sql);
 echo ("Reading data from table" . PHP_EOL);
 if (sqlsrv_has_rows($result)) {
+    $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
     echo("queried succesfully");
-    $_SESSION['username'] = $uid;
+    $_SESSION['name'] = $row['user_firstname'] . $row['user_lastname'];
 } else {
 	echo("yerr this boy no work");
 }
