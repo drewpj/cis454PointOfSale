@@ -19,7 +19,7 @@ $conn = sqlsrv_connect($serverName, $connectionOptions);
 $uid = $_POST['email'];
 $pwd = $_POST['pwd'];
 
-
+//hellothere
 $sql = "SELECT * FROM dbo.User454 WHERE user_email='$uid' and PWDCOMPARE('$pwd', user_password) = 1";
 //SELECT * FROM dbo.User454 WHERE user_email='janedoe@gmail.com' and PWDCOMPARE('hellothere', user_password) = 1
 $result = sqlsrv_query($conn, $sql);
