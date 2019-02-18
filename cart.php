@@ -8,7 +8,7 @@ $serverName = "samp454.database.windows.net";
 	);
 
  $conn = sqlsrv_connect($serverName, $connectionOptions) or DIE("Failed to connect to database");
-*/
+
 $id = $_GET['id'];	
 $sql = "SELECT * FROM dbo.Product454";
 $result = sqlsrv_query($conn,$sql);
