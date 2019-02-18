@@ -9,7 +9,7 @@ session_start();
         <title> login </title>
     </head>
     <body>
-    <form action="login.php" method="POST">
+    <form action="login.php" method="GET">
         <h3> email </h3>
         <input type="text" name="email" placeholder="email">
         <h3>Password </h3>

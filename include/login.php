@@ -17,8 +17,8 @@ $conn = sqlsrv_connect($serverName, $connectionOptions);
 // $uid = mysqli_real_escape_string($conn,$_POST['email']);
 // $pwd = mysqli_real_escape_string($conn,$_POST['pwd']);
 
-$user_email = $_POST['email'];
-$user_password = $_POST['pwd'];
+$user_email = $_GET['email'];
+$user_password = $_GET['pwd'];
 
 echo($user_password);
 echo($user_password);
