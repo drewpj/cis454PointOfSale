@@ -1,5 +1,5 @@
 <?php
-/*    //include_once 'include/db.php';
+include_once 'include/db.php';
 $serverName = "samp454.database.windows.net"; 
     $connectionOptions = array(
         "Database" => "CIS454", 
@@ -7,7 +7,7 @@ $serverName = "samp454.database.windows.net";
         "PWD" => "password!9" 	
 	);
 
- $conn = sqlsrv_connect($serverName, $connectionOptions) or DIE("Failed to connect to database");
+$conn = sqlsrv_connect($serverName, $connectionOptions) or DIE("Failed to connect to database");
 
 $id = $_GET['id'];	
 $sql = "SELECT * FROM dbo.Product454";
@@ -21,7 +21,7 @@ while ($row = $result->fetch_assoc()) {
     sqlsrv_free_stmt($getResults);
      }
 $total = $total + $price;
-$conn->close();
+//$conn->close();
 
 /*
 $id should be assigned when the user selects the item from the products page.
