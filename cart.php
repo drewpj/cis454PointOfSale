@@ -7,8 +7,8 @@ $result = sqlsrv_query($conn,$sql);
 while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
 	//echo($row['product_name']; 
     if ($row['product_id'] === $id){
-			$GLOBALS['price'] = $row['product_price'];
-			$GLOBALS['name'] = $row['product_name'];
+			$_GET['price'] = $row['product_price'];
+			$_GET['name'] = $row['product_name'];
     }
     //sqlsrv_free_stmt($result);
      }
