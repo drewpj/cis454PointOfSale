@@ -23,7 +23,7 @@ $user_password = $_GET['pwd'];
 echo($user_email);
 echo($user_password);
 //hellothere
-$sql = "SELECT user_firstname, user_lastname FROM dbo.User454 WHERE user_email='moon@moon.com' AND PWDCOMPARE('123', user_password) = 1"; //AND PWDCOMPARE(N'$pwd', user_password) = 1";
+$sql = "SELECT user_firstname, user_lastname FROM dbo.User454 WHERE user_email='johndoe@gmail.com' AND PWDCOMPARE('thisisme', user_password) = 1"; //AND PWDCOMPARE(N'$pwd', user_password) = 1";
 //SELECT * FROM User454 WHERE user_email='janedoe@gmail.com' and PWDCOMPARE('hellothere', user_password) = 1
 $result = sqlsrv_query($conn, $sql);
 echo ("Reading data from table" . PHP_EOL);
