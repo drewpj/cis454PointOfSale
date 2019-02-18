@@ -27,7 +27,7 @@
 	$shipping = "Shipping information:\n" . $nl . $name . " " . $familyname . $nl . $email . $phone . $addr . $nl . $zip;
 	$billing = "Billing information:\n" . $nl . $nameB . " " . $familynameB . $nl . $phoneB . $addrB . $nl . $zipB;
 	
-	echo $shipping . $nl;
-	echo $billing;
+	echo nl2br($shipping . $nl);
+	echo nl2br($billing);
 	
 ?>
