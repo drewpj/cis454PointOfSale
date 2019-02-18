@@ -18,7 +18,7 @@ $user_password = $_POST['pwd'];
 
 // $sql = "INSERT INTO dbo.User454 (user_type, user_card, user_firstname, user_lastname, user_email, user_password) VALUES ('$user_type', '$user_card', '$user_firstname', '$user_lastname', '$user_email', '$user_password')";
 //$sql = "INSERT INTO dbo.User454 VALUES ('$user_type', '$user_card', '$user_firstname', '$user_lastname', '$user_email', '$user_password')";
-$sql = "INSERT INTO dbo.User454 (user_type, user_card, user_firstname, user_lastname, user_email, user_password) VALUES ('$user_type', $user_card, '$user_firstname', '$user_lastname', '$user_email', PWDENCRYPT('$user_password'))";
+$sql = "INSERT INTO dbo.User454 (user_type, user_card, user_firstname, user_lastname, user_email, user_password) VALUES ('$user_type', $user_card, '$user_firstname', '$user_lastname', '$user_email', PWDENCRYPT(N'$user_password'))";
 $result = sqlsrv_query($conn, $sql);
 
 if ($result) {
