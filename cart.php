@@ -4,7 +4,7 @@ include_once 'include/db.php';
 $id = $_GET['id'];	
 $sql = "SELECT * FROM dbo.Product454";
 $result = sqlsrv_query($conn,$sql);
-while ($row = $result->fetch_assoc()) {
+/*while ($row = $result->fetch_assoc()) {
 	//echo($row['product_name']; 
     if ($row['product_id'] == $id){
 			$price = $row['product_price'];
