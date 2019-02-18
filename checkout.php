@@ -21,6 +21,6 @@
 	$exp_m = $_POST['exp-month'];
 	$exp_y = $_POST['exp-year'];
 	$ccv = $_POST['ccv'];
-	echo "\n\n\n\n\n" . $ccn . addrB . familyname;
+	echo "\n\n\n\n\n" . $ccn . $addrB . $familyname;
 	
 ?>
