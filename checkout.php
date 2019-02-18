@@ -1,8 +1,9 @@
 <?php
 
-	var_dump($_POST);
-	echo "Print this recipt out for your records\n";
+	//var_dump($_POST);
 	
+	echo "Print this recipt out for your records\n";
+	$nl = "\n";
 	$name = $_POST['name'];
 	$familyname = $_POST['familyname'];
 	$email = $_POST['email'];
@@ -21,6 +22,12 @@
 	$exp_m = $_POST['exp-month'];
 	$exp_y = $_POST['exp-year'];
 	$ccv = $_POST['ccv'];
-	echo "\n\n\n\n\n" . $ccn . $addrB . $familyname;
+	//echo "\n\n\n\n\n" . $ccn . $addrB . $familyname;
+	
+	$shipping = "Shipping information:\n" . $nl . $name . " " . $familyname . $nl . $email . $phone . $addr . $nl . $zip;
+	$billing = "Billing information:\n" . $nl . $nameB . " " . $familynameB . $nl . $phoneB . $addrB . $nl . $zipB;
+	
+	echo $shipping . $nl;
+	echo $billing;
 	
 ?>
