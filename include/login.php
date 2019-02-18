@@ -8,6 +8,10 @@ $connectionOptions = array(
 );
 //Establishes the connection
 $conn = sqlsrv_connect($serverName, $connectionOptions);
+ if($conn)
+        echo "Connected!"
+?>
+
 
 // $uid = mysqli_real_escape_string($conn,$_POST['email']);
 // $pwd = mysqli_real_escape_string($conn,$_POST['pwd']);
