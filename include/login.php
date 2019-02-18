@@ -25,7 +25,7 @@ $sql = "SELECT user_firstname, user_lastname FROM dbo.User454 WHERE user_email='
 //SELECT * FROM dbo.User454 WHERE user_email='janedoe@gmail.com' and PWDCOMPARE('hellothere', user_password) = 1
 $result = sqlsrv_query($conn, $sql);
 echo ("Reading data from table" . PHP_EOL);
-if ($result) {
+if (sqlsrv_num_rows($result) == 1) {
 	echo("queried succesfully");
 } else {
 	echo("yerr this boy no work");
