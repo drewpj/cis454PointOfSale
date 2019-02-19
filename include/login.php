@@ -29,7 +29,7 @@ if (sqlsrv_has_rows($result)) {
     $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
     echo("Logged in successfully!");
     $_SESSION['email'] = $user_email;
-    echo('<a href="../HomePage.html> go to homepage </a>');
+    echo('<a href="../HomePage.html"> go to homepage </a>');
 } else {
 	echo("Wrong password or username!");
 }
