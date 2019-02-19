@@ -32,7 +32,7 @@ if (sqlsrv_has_rows($result)) {
 //Otherwise, say password or username error.
 } else {
     $message = "Wrong password or username!";
-    echo("<script type='text/javascript> alert($message); </script>")
+    echo("<script type='text/javascript> alert($message); </script>");
 }
 
 
