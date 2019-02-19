@@ -32,7 +32,7 @@ if (sqlsrv_has_rows($result)) {
     $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
     //Set user_type and user name variables.
     $type = $row['user_type'];
-    $name = $row['user_firstname'] . $row['user_lastname'];
+    $name = $row['user_firstname'] . " " . $row['user_lastname'];
     //Bind them to the session.
     $_SESSION['type'] = $type;
     $_SESSION['name'] = $name;
