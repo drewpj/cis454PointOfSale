@@ -72,7 +72,9 @@ INSERT INTO Product454 (product_name, product_price, product_seller)
             ('Grilled Salmon with Potatoes', 26.00, 'Seller3'),
             ('Roast Pork with Vegetables', 38.00, 'Seller3'),
             ('Garden Pizza', 19.00, 'Seller2'),
-            ('Spicy Chicken with Rice', 27.00, 'Seller2')
+            ('Spicy Chicken with Rice', 27.00, 'Seller2'),
+            ('Avocado Toast', 15.00, 'Seller3),
+	    ('Breakfast Sandwich', 18.00, 'Seller3')
 
 -- Adds data to the Payment table of the database											
 INSERT INTO Payment454 (is_card_debit, card_number, card_holder_name, card_holder_suid, total_price)
