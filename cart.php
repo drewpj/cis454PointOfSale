@@ -208,7 +208,7 @@ $total should be updated using $price and i meant to be displayed.
 								</div>
 							</td>
 							<td class="column-2"><?php echo($name . "<br>");?></td>
-							<td class="column-3"><?php echo($price . "<br>");?></td>
+							<td class="column-3"><?php echo("$" . $price . "<br>");?></td>
 							<td class="column-4">
 								<div class="flex-w bo5 of-hidden w-size17">
 									<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
@@ -222,7 +222,7 @@ $total should be updated using $price and i meant to be displayed.
 									</button>
 								</div>
 							</td>
-							<td class="column-5"><?php echo $total;?></td>
+							<td class="column-5"><?php echo( "$" . $total);?></td>
 						</tr>
 
 											</table>
@@ -265,7 +265,7 @@ $total should be updated using $price and i meant to be displayed.
 					</span>
 
 					<span class="m-text21 w-size20 w-full-sm">
-						<?php echo $total;?>
+						<?php echo("$" . $total);?>
 					</span>
 				</div>
 
