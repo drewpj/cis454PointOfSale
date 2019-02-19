@@ -2,7 +2,7 @@
 	require 'processCard.php';
 	session_start();
 	
-	$_SESSION['cart']
+	//$_SESSION['cart']
 	$amount = $_SESSION['total'];
 	$items = $_SESSION['cart'];
 	$itemName = $_SESSION['prodName'];
@@ -33,10 +33,10 @@
 	$charged = "\n\n$" . $amount . " charged to x". substr($ccn,-4);
 	
 	if (processCard($nameCard,$cnn,$ccv,$exp_m,$exp_y)){
-	echo "Print this recipt out for your records\n";
-	echo nl2br($shipping . $nl);
-	echo nl2br($billing);
-	echo nl2br($charged);
+		echo "Print this recipt out for your records\n";
+		echo nl2br($shipping . $nl);
+		echo nl2br($billing);
+		echo nl2br($charged);
 	} else {
 		echo nl2br("Processing card failed. Are you sure your information is correct?\n");
 	}
