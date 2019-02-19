@@ -36,9 +36,7 @@ if (sqlsrv_has_rows($result)) {
     //Bind them to the session.
     $_SESSION['type'] = $type;
     $_SESSION['name'] = $name;
-    echo($type);
-    echo($name);
-    //header("Location: ../HomePage.php?login=success");
+    header("Location: ../HomePage.php?login=success");
 //Otherwise, say password or username error.
 } else {
     $message = "Wrong password or username!";
