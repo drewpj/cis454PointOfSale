@@ -25,12 +25,19 @@ $result = sqlsrv_query($conn, $sql);
 
 //If returns anything, then login is succesful.
 if (sqlsrv_has_rows($result)) {
-    $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
     echo("Logged in successfully!");
+    //Set session variable email to $user_email
     $_SESSION['email'] = $user_email;
-    // $value = sqlsrv_fetch_object($result);
+    //Get row results
+    $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
+    //Set user_type and user name variables.
     $type = $row['user_type'];
+    $name = $row['user_first'] . $row['user_last'];
+    //Bind them to the session.
+    $_SESSION['type'] = $type;
+    $_SESSION['name'] = $name;
     echo($type);
+    echo($name);
     //header("Location: ../HomePage.php?login=success");
 //Otherwise, say password or username error.
 } else {
