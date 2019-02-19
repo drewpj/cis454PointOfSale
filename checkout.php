@@ -42,7 +42,7 @@
 		echo nl2br($shipping . $nl);
 		echo nl2br($billing);
 		echo nl2br($charged);
-		$sql = "INSERT INTO dbo.IncomingOrder454 (product_name, product_price, ordereredBy) VALUES ('$itemName','$amount','$name')";
+		$sql = "INSERT INTO dbo.IncomingOrder454 (product_name, product_price, ordereredBy) VALUES ('$itemName',floatval($amount),'$name')";
 		$result = sqlsrv_query($conn, $sql);
 	} else {
 		echo nl2br("Processing card failed. Are you sure your information is correct?\n");
