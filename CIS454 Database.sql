@@ -41,6 +41,15 @@ CREATE TABLE Vendor454 (
 	vendor_email varchar(50) not null
 )
 
+-- Creates the Incoming Orders table of the database initializing all the variables of that table
+CREATE TABLE IncomingOrder454 (
+	product_id int IDENTITY not null,
+	product_name varchar(50) not null,
+	product_price decimal(4,2) not null,
+	product_seller varchar(50) not null,
+    orderedBy varchar(50) not null
+)
+
 -- Adds data to the User table of the database
 INSERT INTO User454 (user_type, user_card, user_firstname, user_lastname, user_email, user_password)
 	VALUES ('Manager', 1, 'John', 'Doe', 'johndoe@gmail.com', PWDENCRYPT('thisisme')),
