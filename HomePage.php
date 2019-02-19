@@ -1,4 +1,6 @@
-<? start_session(); ?>
+<?php 
+start_session(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -171,7 +173,7 @@
 						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 						<?php
 							if (isset($_SESSION['email'])) {
-								echo($_SESSION['user_email']); 
+								echo($_SESSION['email']); 
 							}
 							else {
 								echo("login");
