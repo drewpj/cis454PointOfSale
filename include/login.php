@@ -28,8 +28,8 @@ if (sqlsrv_has_rows($result)) {
     $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
     echo("Logged in successfully!");
     $_SESSION['email'] = $user_email;
-    $value = sqlsrv_fetch_object($result);
-    $type = $value->user_type;
+    // $value = sqlsrv_fetch_object($result);
+    $type = $row[0];
     echo($type);
     //header("Location: ../HomePage.php?login=success");
 //Otherwise, say password or username error.
