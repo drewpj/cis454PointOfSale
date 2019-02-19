@@ -24,8 +24,8 @@ $result = sqlsrv_query($conn, $sql);
 
 if ($result) {
     echo("Success");
-    header("Location: index.php?signup=success");
+    header("Location: ../login.html?signup=success");
 } else {
     echo("error");
-    header("Location: index.php?signup=error");
+    header("Location: ../login.html?signup=error");
 }
