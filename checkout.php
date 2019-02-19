@@ -1,11 +1,13 @@
 <?php
 	require 'processCard.php';
+	include_once 'include/db.php';
 	session_start();
 	
 	//$_SESSION['cart']
-	$amount = $_SESSION['total'];
+	$amount = (float) $_SESSION['total'];
 	$items = $_SESSION['cart'];
 	$itemName = $_SESSION['prodName'];
+	$orderedBy = $_SESSION['email'];
 	
 	$nl = "\n";
 	
@@ -41,10 +43,14 @@
 		echo nl2br($shipping . $nl);
 		echo nl2br($billing);
 		echo nl2br($charged);
+		$sql = "INSERT INTO dbo.IncomingOrder454 (product_name, product_price, product_seller ,orderedBy) VALUES ('$itemName',$amount,'LeBron','$email')";
+		$result = sqlsrv_query($conn, $sql);
+		if ($result) {
+			echo "success";
+		} else {
+			echo "failure";
+		}
 	} else {
 		echo nl2br("Processing card failed. Are you sure your information is correct?\n");
 	}
-	
-	//$sql = "INSERT INTO dbo.IncomingOrder454 (user_type, user_card, user_firstname, user_lastname, user_email, user_password) VALUES ('$user_type', $user_card, '$user_firstname', '$user_lastname', '$user_email', PWDENCRYPT('$user_password'))";
-	
 ?>
