@@ -228,7 +228,7 @@ session_start();
 									<div class="block2-btn-addcart w-size1 trans-0-4">
 										<!-- Button -->					 
 										<form action="cart.php" method="POST">
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="11">
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="id" type="text" value="11">
 												Add to Cart
 											</button>
 										</form>	
@@ -252,7 +252,7 @@ session_start();
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!-- Button -->					 
 											<form action="cart.php" method="POST">
-												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="9">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="id" type="text" value="9">
 													Add to Cart
 												</button>
 											</form>	
@@ -280,7 +280,7 @@ session_start();
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!-- Button -->					 
 											<form action="cart.php" method="POST">
-												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="12">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="id" type="text" value="12">
 													Add to Cart
 												</button>
 											</form>	
@@ -304,7 +304,7 @@ session_start();
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!-- Button -->					 
 											<form action="cart.php" method="POST">
-												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="1">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="id" type="text" value="1">
 													Add to Cart
 												</button>
 											</form>	
@@ -333,7 +333,7 @@ session_start();
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!-- Button -->					 
 											<form action="cart.php" method="POST">
-												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="3">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="id" type="text" value="3">
 													Add to Cart
 												</button>
 											</form>	
@@ -357,7 +357,7 @@ session_start();
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 										<!-- Button -->					 
 											<form action="cart.php" method="POST">
-												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="6">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="id" type="text" value="6">
 													Add to Cart
 												</button>
 											</form>	
@@ -386,7 +386,7 @@ session_start();
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!-- Button -->					 
 											<form action="cart.php" method="POST">
-												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="10">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="id" type="text" value="10">
 													Add to Cart
 												</button>
 											</form>	
@@ -410,7 +410,7 @@ session_start();
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!-- Button -->					 
 											<form action="cart.php" method="POST">
-												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="1">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="id" type="text" value="1">
 													Add to Cart
 												</button>
 											</form>	
