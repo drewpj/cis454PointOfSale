@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,6 +101,14 @@
 				<div class="header-icons">
 					<a href="login.html" class="header-wrapicon1 dis-block">
 						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+						<?php
+							if (isset($_SESSION['email'])) {
+								echo($_SESSION['email']); 
+							}
+							else {
+								echo("login");
+							}
+						?>
 					</a>
 
 					<span class="linedivide1"></span>

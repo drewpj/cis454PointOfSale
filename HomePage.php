@@ -38,14 +38,13 @@ session_start();
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
-<meta name="viewport" initial-scale=1">
 <style>
 * {
   box-sizing: border-box;
 }
 
 .column {
-  float: .middle;
+  float: middle;
   width: 25%;
   padding: 20px;
   height: 1050px;
