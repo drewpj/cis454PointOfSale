@@ -304,7 +304,7 @@ session_start();
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!-- Button -->					 
 											<form action="cart.php" method="POST">
-												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="id" type="text" value="1">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="id" type="text" value="13">
 													Add to Cart
 												</button>
 											</form>	
@@ -410,7 +410,7 @@ session_start();
 										<div class="block2-btn-addcart w-size1 trans-0-4">
 											<!-- Button -->					 
 											<form action="cart.php" method="POST">
-												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="id" type="text" value="1">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" name="id" type="text" value="14">
 													Add to Cart
 												</button>
 											</form>	
