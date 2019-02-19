@@ -18,7 +18,7 @@ $user_email = $_POST['email'];
 $user_password = $_POST['pwd'];
 
 //SQL statement to be queried.
-$sql = "SELECT user_firstname, user_lastname, user_email FROM dbo.User454 WHERE user_email='$user_email' AND PWDCOMPARE('$user_password', user_password) = 1"; //AND PWDCOMPARE(N'$pwd', user_password) = 1";
+$sql = "SELECT user_firstname, user_lastname, user_type FROM dbo.User454 WHERE user_email='$user_email' AND PWDCOMPARE('$user_password', user_password) = 1"; //AND PWDCOMPARE(N'$pwd', user_password) = 1";
 
 //Get result from query.
 $result = sqlsrv_query($conn, $sql);
@@ -28,7 +28,10 @@ if (sqlsrv_has_rows($result)) {
     $row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC);
     echo("Logged in successfully!");
     $_SESSION['email'] = $user_email;
-    header("Location: ../HomePage.php?login=success");
+    $value = sqlsrv_fetch_object($result);
+    $type = $value->user_type;
+    echo($type);
+    //header("Location: ../HomePage.php?login=success");
 //Otherwise, say password or username error.
 } else {
     $message = "Wrong password or username!";
