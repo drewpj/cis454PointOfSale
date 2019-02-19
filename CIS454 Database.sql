@@ -4,6 +4,7 @@
 -- DROP TABLE Product454 
 -- DROP TABLE Payment454
 -- DROP TABLE Vendor454
+-- DROP TABLE IncomingOrder454
 
 -- Creates the User table of the database initializing all the variables of that table
 CREATE TABLE User454 (
@@ -60,21 +61,18 @@ INSERT INTO User454 (user_type, user_card, user_firstname, user_lastname, user_e
 
 -- Adds data to the Product table of the database
 INSERT INTO Product454 (product_name, product_price, product_seller)
-	VALUES ('Eggs on Toast with Fruit', 16.50, 'Seller1'), --seller1 is breakfast
-			('Spicy Chicken with Rice', 27.00, 'Seller2'), --seller 2 is dinner
-			('Exotic Fruit Platter', 24.00, 'Seller3'), --seller 3 in misc
-			('Roast Pork with Vegetables', 38.00, 'Seller3'),
-			('Grilled Salmon with Potatos', 26.00, 'Seller3'),
-			('Eggs on Avacado Toast', 15.00, 'Seller1'),
-			('Buffalo Chicken Sandwich', 22.00, 'Seller2'),
-			('Breakfast Sandwich with Eggs and Bacon', 18.00, 'Seller1'),
-			('Teriyaki Chicken Sub', 18.00, 'Seller3'),
-			('The Ultimate Burger', 23.00, 'Seller2'),
-			('Prawn Roll with Spinach', 17.00, 'Seller3'),
-			('Fettaccini in Creamy Sauce', 35.00, 'Seller2'),
-			('Sushi Platter', 35.00, 'Seller3'),
-			('Spaghetti Bolognaise', 27.00, 'Seller2'),
-			('Garden Pizza', 19.00, 'Seller2')
+	VALUES ('Teriyaki Chicken Sub', 18.00, 'Seller3'), --Seller3 is misc
+    		('The Ultimate Burger', 23.00, 'Seller2'), --Seller2 is dinner
+            ('Fettaccini in Creamy Sauce', 35.00, 'Seller2'),
+            ('Crab and Prawn Roll with Spinach', 17.00, 'Seller3'),
+            ('Sushi Platter', 35.00, 'Seller3'),
+            ('Buffalo Chicken Sandwich', 22.00, 'Seller2'),
+            ('Steak with Seasonal Veggies', 35.00, 'Seller2'),
+            ('Spaghetti Bolognaise', 27.00, 'Seller2'),
+            ('Grilled Salmon with Potatoes', 26.00, 'Seller3'),
+            ('Roast Pork with Vegetables', 38.00, 'Seller3'),
+            ('Garden Pizza', 19.00, 'Seller2'),
+            ('Spicy Chicken with Rice', 27.00, 'Seller2')
 
 -- Adds data to the Payment table of the database											
 INSERT INTO Payment454 (is_card_debit, card_number, card_holder_name, card_holder_suid, total_price)
@@ -106,8 +104,3 @@ ALTER TABLE Vendor454
 -- Adds a primary key to Product table	
 ALTER TABLE Product454 ADD
 	CONSTRAINT FK_seller FOREIGN KEY (product_seller) REFERENCES Vendor454(vendor_name)
-
--- SELECT * FROM User454
--- SELECT * FROM Product454
--- SELECT * FROM Payment454
--- SELECT * FROM Vendor454
