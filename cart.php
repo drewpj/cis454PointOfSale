@@ -208,7 +208,7 @@ $total should be updated using $price and i meant to be displayed.
 									<img src="images/item-cart-01.jpg" alt="IMG-PRODUCT">
 								</div>
 							</td>
-							<td class="column-2"><?php //foreach($cart as $item) {echo($item[2] . "<br>");?></td>
+							<td class="column-2"><?php echo($price . "<br>");?></td>
 							<td class="column-3"><?php //foreach($cart as $item) {echo($item[1] . "<br>");?></td>
 							<td class="column-4">
 								<div class="flex-w bo5 of-hidden w-size17">
