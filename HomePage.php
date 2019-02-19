@@ -137,7 +137,7 @@ session_start();
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="HomePage.html">Home</a>
+								<a href="HomePage.php">Home</a>
 							</li>
 							<li>
 								<a href="menu.php">Menu</a>
