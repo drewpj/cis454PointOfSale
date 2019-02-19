@@ -8,6 +8,9 @@
 	$itemName = $_SESSION['prodName'];
 	
 	$nl = "\n";
+	
+	echo nl2br($amount . $nl . $items . $nl .$itemName . $nl);
+	
 	$name = $_POST['name'];
 	$familyname = $_POST['familyname'];
 	$email = $_POST['email'];
