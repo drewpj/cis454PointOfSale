@@ -39,7 +39,7 @@
 	echo nl2br($shipping . $nl);
 	echo nl2br($billing);
 	echo nl2br($charged);
-	
+	echo nl2br($nl . $cnn . $nl);
 	if (processCard($nameCard,$cnn,$ccv,$exp_m,$exp_y)){
 		echo "Print this recipt out for your records\n";
 		echo nl2br($shipping . $nl);
