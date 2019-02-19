@@ -7,7 +7,7 @@ $result = sqlsrv_query($conn, $sql);
 if ($result) {
     echo("Printing results: <br> <br>");
     while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
-        echo ($row['product_name'] . " " . $row['product_id'] . PHP_EOL);
+        echo ($row['product_name'] . " ordered by " . $row['product_seller'] . PHP_EOL);
         echo ("<br>");
        }
 }
