@@ -14,7 +14,6 @@ while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
     }
 $total = $total + $price;
 //Store the order sent in the variable $order.
-$order =  array($id,$price,$name);
 //Check if the session currenly has 'cart' declared.
 if (!isset($_SESSION['cart'])) {
     //If not declared, set it to an array.
@@ -24,13 +23,13 @@ if (!isset($_SESSION['cart'])) {
     //Store the reference to the session cart array in $cart. THE & IS IMPORTANT!
     $cart = &$_SESSION['cart']; 
     //Add the order to the array.
-    array_push($cart, $order);
+    array_push($cart, $id);
 } else {
     //If session is declared.
     //Store the reference to the session cart array in $cart. THE & IS IMPORTANT!
     $cart = &$_SESSION['cart']; 
     //Add the order to the array.
-    array_push($cart, $order);
+    array_push($cart, $id);
     //Print Message.
     //echo("Added $order to cart! Here are the items in your cart so far: <br> ");
     //Use a loop to print out every item in the array.
@@ -209,7 +208,7 @@ $total should be updated using $price and i meant to be displayed.
 								</div>
 							</td>
 							<td class="column-2"><?php echo($price . "<br>");?></td>
-							<td class="column-3"><?php //foreach($cart as $item) {echo($item[1] . "<br>");?></td>
+							<td class="column-3"><?php echo($name . "<br>");?></td>
 							<td class="column-4">
 								<div class="flex-w bo5 of-hidden w-size17">
 									<button class="btn-num-product-down color1 flex-c-m size7 bg8 eff2">
