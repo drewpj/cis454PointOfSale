@@ -7,6 +7,7 @@
 	$amount = $_SESSION['total'];
 	$items = $_SESSION['cart'];
 	$itemName = $_SESSION['prodName'];
+	$orderedBy = $_SESSION['email']
 	
 	$nl = "\n";
 	
@@ -42,7 +43,7 @@
 		echo nl2br($shipping . $nl);
 		echo nl2br($billing);
 		echo nl2br($charged);
-		$sql = "INSERT INTO dbo.IncomingOrder454 (product_name, product_price, product_seller ,orderedBy) VALUES ('$itemName',floatval($amount),'LeBron','$_SESSION['email']')";
+		$sql = "INSERT INTO dbo.IncomingOrder454 (product_name, product_price, product_seller ,orderedBy) VALUES ('$itemName',floatval($amount),'LeBron','$orderedBy')";
 		$result = sqlsrv_query($conn, $sql);
 		if ($result) {
 			echo "success";
