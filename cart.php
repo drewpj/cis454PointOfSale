@@ -274,7 +274,7 @@ $total should be updated using $price and i meant to be displayed.
 				<div class="size15 trans-0-4">
 					<!-- Button -->
 					<form action="/checkout.html">
-						<button onclick="location.href=/checkout.html" type="button" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+						<button onclick="location.href='http://3.95.168.218/checkout.html'" type="button" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
 							Proceed to Checkout
 						</button>
 					</form>
