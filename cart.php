@@ -14,7 +14,7 @@ while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
     }
 $total = $total + $price;
 //Store the order sent in the variable $order.
-/*$order =  array($id,$price,$name);
+$order =  array($id,$price,$name);
 //Check if the session currenly has 'cart' declared.
 if (!isset($_SESSION['cart'])) {
     //If not declared, set it to an array.
