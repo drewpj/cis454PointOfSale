@@ -161,7 +161,7 @@ session_start();
 							}
 							
 							if (isset($_SESSION['type']) && $_SESSION['type'] == "Manager") {
-								echo("<a hre='manager.html'> Manage Orders </a>");
+								echo(" <br> <a href='manager.html'> Manage Orders </a>");
 							}
 						?>
 					</a>
