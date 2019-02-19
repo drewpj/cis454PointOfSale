@@ -29,7 +29,7 @@ if (sqlsrv_has_rows($result)) {
     echo("Logged in successfully!");
     $_SESSION['email'] = $user_email;
     // $value = sqlsrv_fetch_object($result);
-    $type = $row[0];
+    $type = $row['user_type'];
     echo($type);
     //header("Location: ../HomePage.php?login=success");
 //Otherwise, say password or username error.
