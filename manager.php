@@ -139,7 +139,7 @@ session_start();
 	<section class="bgwhite p-t-66 p-b-60">
 		<div class="container">
 				<div class="col-md-6 p-b-30">
-					<form class="leave-comment">
+					<form action="include/get_orders.php" class="leave-comment">
 						<h4 class="m-text26 p-b-36 p-t-15">
 							Click here to see current orders
 						</h4>
