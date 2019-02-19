@@ -7,7 +7,7 @@
 	$amount = (float) $_SESSION['total'];
 	$items = $_SESSION['cart'];
 	$itemName = $_SESSION['prodName'];
-	$orderedBy = $_SESSION['prodName'];
+	$orderedBy = $_SESSION['email'];
 	
 	$nl = "\n";
 	
