@@ -159,6 +159,9 @@ session_start();
 							else {
 								echo("login");
 							}
+							if (isset($_SESSION['type'] && $_SESSION['type'] == "Manager")) {
+								echo("<a hre='manager.html'> Manage Orders </a>");
+							}
 						?>
 					</a>
 					<span class="linedivide1"></span>
