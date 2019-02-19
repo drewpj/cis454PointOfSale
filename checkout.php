@@ -43,7 +43,7 @@
 		echo nl2br($shipping . $nl);
 		echo nl2br($billing);
 		echo nl2br($charged);
-		$sql = "INSERT INTO dbo.IncomingOrder454 (product_name, product_price, product_seller ,orderedBy) VALUES ('$itemName',$amount,'LeBron','$orderedBy')";
+		$sql = "INSERT INTO dbo.IncomingOrder454 (product_name, product_price, product_seller ,orderedBy) VALUES ('$itemName',$amount,'LeBron','$email')";
 		$result = sqlsrv_query($conn, $sql);
 		if ($result) {
 			echo "success";
