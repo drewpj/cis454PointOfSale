@@ -141,7 +141,7 @@ session_start();
 								<a href="HomePage.html">Home</a>
 							</li>
 							<li>
-								<a href="menu.html">Menu</a>
+								<a href="menu.php">Menu</a>
 							</li>
 							<li>
 								<a href="contact.html">Contact</a>
