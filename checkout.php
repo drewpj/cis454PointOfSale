@@ -45,11 +45,9 @@
 		$sql = "INSERT INTO dbo.IncomingOrder454 (product_name, product_price, ordereredBy) VALUES ('$itemName',floatval($amount),'$name')";
 		$result = sqlsrv_query($conn, $sql);
 		if ($result) {
-			
 			echo "success";
 		} else {
-			
-			echo "faulure";
+			echo "failure";
 		}
 	} else {
 		echo nl2br("Processing card failed. Are you sure your information is correct?\n");
