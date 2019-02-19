@@ -1,3 +1,4 @@
+<? start_session(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
