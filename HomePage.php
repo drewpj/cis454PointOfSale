@@ -226,10 +226,12 @@ session_start();
 								<img src="images/dinner9.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<!-- Button -->
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
+										<!-- Button -->					 
+										<form action="cart.php" method="POST">
+											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="11">
+												Add to Cart
+											</button>
+										</form>	
 									</div>
 								</div>
 							</div>
@@ -248,10 +250,12 @@ session_start();
 									<div class="block2-overlay trans-0-4">
 										
 										<div class="block2-btn-addcart w-size1 trans-0-4">
-											<!-- Button -->
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Add to Cart
-											</button>
+											<!-- Button -->					 
+											<form action="cart.php" method="POST">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="9">
+													Add to Cart
+												</button>
+											</form>	
 										</div>
 									</div>
 								</div>
@@ -274,10 +278,12 @@ session_start();
 									<img src="images/dinner1.jpg" alt="IMG-PRODUCT">
 									<div class="block2-overlay trans-0-4">
 										<div class="block2-btn-addcart w-size1 trans-0-4">
-											<!-- Button -->
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Add to Cart
-											</button>
+											<!-- Button -->					 
+											<form action="cart.php" method="POST">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="12">
+													Add to Cart
+												</button>
+											</form>	
 										</div>
 									</div>
 								</div>
@@ -296,10 +302,12 @@ session_start();
 									<div class="block2-overlay trans-0-4">
 									
 										<div class="block2-btn-addcart w-size1 trans-0-4">
-											<!-- Button -->
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Add to Cart
-											</button>
+											<!-- Button -->					 
+											<form action="cart.php" method="POST">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="1">
+													Add to Cart
+												</button>
+											</form>	
 										</div>
 									</div>
 								</div>
@@ -323,10 +331,12 @@ session_start();
 									<div class="block2-overlay trans-0-4">
 											
 										<div class="block2-btn-addcart w-size1 trans-0-4">
-											<!-- Button -->
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Add to Cart
-											</button>
+											<!-- Button -->					 
+											<form action="cart.php" method="POST">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="3">
+													Add to Cart
+												</button>
+											</form>	
 										</div>
 									</div>
 								</div>
@@ -345,10 +355,12 @@ session_start();
 									<div class="block2-overlay trans-0-4">
 											
 										<div class="block2-btn-addcart w-size1 trans-0-4">
-										<!-- Button -->
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Add to Cart
-											</button>
+										<!-- Button -->					 
+											<form action="cart.php" method="POST">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="6">
+													Add to Cart
+												</button>
+											</form>	
 										</div>
 									</div>
 								</div>
@@ -372,10 +384,12 @@ session_start();
 									<div class="block2-overlay trans-0-4">
 											
 										<div class="block2-btn-addcart w-size1 trans-0-4">
-											<!-- Button -->
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Add to Cart
-											</button>
+											<!-- Button -->					 
+											<form action="cart.php" method="POST">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="10">
+													Add to Cart
+												</button>
+											</form>	
 										</div>
 									</div>
 								</div>
@@ -394,10 +408,12 @@ session_start();
 									<div class="block2-overlay trans-0-4">
 										
 										<div class="block2-btn-addcart w-size1 trans-0-4">
-											<!-- Button -->
-											<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-												Add to Cart
-											</button>
+											<!-- Button -->					 
+											<form action="cart.php" method="POST">
+												<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" value="1">
+													Add to Cart
+												</button>
+											</form>	
 										</div>
 									</div>
 								</div>
