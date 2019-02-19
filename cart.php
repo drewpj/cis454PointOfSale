@@ -12,14 +12,14 @@ while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
     }
     //sqlsrv_free_stmt($result);
     }
-$total = $total + $price;
+$total = number_format($total + $price , 2 , '.' , '');
 //Store the order sent in the variable $order.
 //Check if the session currenly has 'cart' declared.
 if (!isset($_SESSION['cart'])) {
     //If not declared, set it to an array.
     $_SESSION['cart'] = array();
     //Print Message.
-    echo("Cart is empty! Initialized to empty cart and added $order! <br> <br>");
+    //echo("Cart is empty! Initialized to empty cart and added $order! <br> <br>");
     //Store the reference to the session cart array in $cart. THE & IS IMPORTANT!
     $cart = &$_SESSION['cart']; 
     //Add the order to the array.
