@@ -1,7 +1,7 @@
 <?php
 session_start();
 include_once 'include/db.php';
-$id = 1//(int)$_POST['id'];	
+$id = 1;//(int)$_POST['id'];	
 $sql = "SELECT * FROM dbo.Product454";
 $result = sqlsrv_query($conn,$sql);
 while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
