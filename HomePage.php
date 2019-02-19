@@ -1,6 +1,3 @@
-<?php 
-start_session(); 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -172,6 +169,7 @@ start_session();
 					<a href="login.html" class="header-wrapicon1 dis-block">
 						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 						<?php
+							start_session(); 
 							if (isset($_SESSION['email'])) {
 								echo($_SESSION['email']); 
 							}
