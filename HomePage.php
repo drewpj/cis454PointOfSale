@@ -217,7 +217,7 @@ session_start();
 	<class="bgwhite p-t-66 p-b-60">
 				<center>
 					<div class="row">
- 						<div class="column">
+ 						<div class="column" style="margin:auto;">
     					
     						<p>
 						<div class="block2">
