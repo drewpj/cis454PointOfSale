@@ -9,6 +9,8 @@ while ($row = sqlsrv_fetch_array($result, SQLSRV_FETCH_ASSOC)) {
     if ($row['product_id'] === $id){
 			$price = $row['product_price'];
 			$name = $row['product_name'];
+			$_SESSION['total'] = $price;
+			$_SESSION['prodName'] = $name;
     }
     //sqlsrv_free_stmt($result);
     }
@@ -271,9 +273,11 @@ $total should be updated using $price and i meant to be displayed.
 
 				<div class="size15 trans-0-4">
 					<!-- Button -->
-					<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
-						Proceed to Checkout
-					</button>
+					<form action="/checkout.html">
+						<button onclick="location.href=/checkout.html" type="button" class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">
+							Proceed to Checkout
+						</button>
+					</form>
 				</div>
 			</div>
 		</div>

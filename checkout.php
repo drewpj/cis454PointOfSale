@@ -1,7 +1,11 @@
 <?php
 	require 'processCard.php';
+	session_start();
 	
+	$_SESSION['cart']
 	$amount = $_SESSION['total'];
+	$items = $_SESSION['cart'];
+	$itemName = $_SESSION['prodName'];
 	
 	$nl = "\n";
 	$name = $_POST['name'];
@@ -36,5 +40,7 @@
 	} else {
 		echo nl2br("Processing card failed. Are you sure your information is correct?\n");
 	}
+	
+	//$sql = "INSERT INTO dbo.IncomingOrder454 (user_type, user_card, user_firstname, user_lastname, user_email, user_password) VALUES ('$user_type', $user_card, '$user_firstname', '$user_lastname', '$user_email', PWDENCRYPT('$user_password'))";
 	
 ?>
