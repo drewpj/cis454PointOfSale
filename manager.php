@@ -154,16 +154,23 @@ session_start();
 						</div>
 					</form>
 				</div>
+	
 				<?php
-						if (!isset($_SESSION['manager_orders'])) {
-							echo("<h3> There are no incoming orders! </h3>");
-						}
-						else {
+						if (isset($_SESSION['manager_orders'])) {
+							echo("
+							<table style="width:100%">
+								<tr>
+									<th> Product Order </th>
+									<th> Customer Name </th>
+									<th> Order Price </th>
+								</tr>
+							");
 							$manager_orders = $_SESSION['manager_orders'];
 							foreach($manager_orders as $item) {
-								echo($item . "<br>");
+								echo($item);
 							}
-						}
+							echo("</table>");
+						}	
 				?>
 			</div>
 		</div>
