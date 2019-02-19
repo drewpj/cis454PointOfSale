@@ -151,7 +151,10 @@ session_start();
 									Show Orders
 								</button>
 							</form>
-						<?php
+						</div>
+					</form>
+				</div>
+				<?php
 						if (!isset($_SESSION['manager_orders'])) {
 							echo("<h3> There are no incoming orders! </h3>");
 						}
@@ -161,10 +164,7 @@ session_start();
 								echo($item . "<br>");
 							}
 						}
-						?>
-						</div>
-					</form>
-				</div>
+				?>
 			</div>
 		</div>
 	</section>
