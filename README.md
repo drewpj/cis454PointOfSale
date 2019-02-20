@@ -21,3 +21,8 @@ The website is live, and can be accessed at http://ec2-3-95-168-218.compute-1.am
 
 The files are individually accessible (with last modified timestamps) at http://3.95.168.218/
 
+If you want to run on your local machine (not reccommended), you will have to install the following software packages corresponding to your operating system
+- Apache Server
+- PHP
+- MS SQL
+
