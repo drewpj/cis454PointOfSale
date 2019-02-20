@@ -102,13 +102,16 @@ session_start();
 					<a href="login.html" class="header-wrapicon1 dis-block">
 						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 						<?php
+							//If user logged in, show email.
 							if (isset($_SESSION['email'])) {
 								echo($_SESSION['email']); 
 							}
+							//otherwise, promp login.
 							else {
 								echo("login");
 							}
 							
+							//If user is of type manager, allow access to Manage page.
 							if (isset($_SESSION['type']) && $_SESSION['type'] == "Manager") {
 								echo(" <br> <a href='manager.php'> Manage Orders </a>");
 							}

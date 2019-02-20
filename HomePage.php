@@ -1,4 +1,5 @@
 <?php
+//start session.
 session_start();
 ?>
 
@@ -153,13 +154,16 @@ session_start();
 					<a href="login.html" class="header-wrapicon1 dis-block">
 						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
 						<?php
+							//this is for printing the email if user is logged in.
 							if (isset($_SESSION['email'])) {
 								echo($_SESSION['email']); 
 							}
+							//Otherwise, prompt user to log in.
 							else {
 								echo("login");
 							}
 							
+							//If user is of category manager, then allow them to access the manager page.
 							if (isset($_SESSION['type']) && $_SESSION['type'] == "Manager") {
 								echo(" <br> <a href='manager.php'> Manage Orders </a>");
 							}
