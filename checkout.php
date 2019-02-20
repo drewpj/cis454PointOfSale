@@ -1,13 +1,16 @@
 <?php
+	//necessary imports
 	require 'processCard.php';
 	include_once 'include/db.php';
 	session_start();
 	
+	//gathering session information
 	$amount = (float) $_SESSION['total'];
 	$items = $_SESSION['cart'];
 	$itemName = $_SESSION['prodName'];
 	$orderedBy = $_SESSION['email'];
 	
+	//gathering POST information
 	$nl = "\n";
 	$name = $_POST['name'];
 	$familyname = $_POST['familyname'];
@@ -29,12 +32,14 @@
 	$ccv = $_POST['ccv'];
 	//echo "\n\n\n\n\n" . $ccn . $addrB . $familyname;
 	
+	//constructing strings to print
 	$shipping = "\nShipping information:\n" . $name . " " . $familyname . $nl . $email . $nl . $phone . $nl . $addr . $nl . $zip;
 	$billing = "\nBilling information:\n" . $nameB . " " . $familynameB . $nl . $phoneB . $nl . $addrB . $nl . $zipB;
 	$charged = "\n\n$" . $amount . " charged to x". substr($ccn,-4);
 	
-	//echo nl2br("the card number is: " . $ccn . $nl);
+	//checking if the card is valid
 	if (processCard($nameCard,$ccn,$ccv,$exp_m,$exp_y)){
+		//if the card is valid, print the recipt
 		echo "Print this recipt out for your records\n";
 		echo nl2br($shipping . $nl);
 		echo nl2br($billing);
@@ -42,6 +47,7 @@
 		$sql = "INSERT INTO dbo.IncomingOrder454 (product_name, product_price, product_seller ,orderedBy) VALUES ('$itemName',$amount,'LeBron','$email')";
 		$result = sqlsrv_query($conn, $sql);
 	} else {
+		//if the card isn't valid, don't print the recipt 
 		echo nl2br("Processing card failed. Are you sure your information is correct?\n");
 	}
 ?>
