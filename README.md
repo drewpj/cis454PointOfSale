@@ -22,7 +22,7 @@ The website is live, and can be accessed at http://ec2-3-95-168-218.compute-1.am
 The files are individually accessible (with last modified timestamps) at http://3.95.168.218/
 
 If you want to run on your local machine (not reccommended), you will have to install the following software packages corresponding to your operating system
-- Apache Server
-- PHP
-- MS SQL
+- Apache Server https://httpd.apache.org/
+- PHP http://www.php.net/ 
+- Microsoft Drivers for PHP for SQL Server (for MS SQL use) https://docs.microsoft.com/en-us/sql/connect/php/microsoft-php-driver-for-sql-server?view=sql-server-2017
 
