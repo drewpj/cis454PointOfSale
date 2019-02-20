@@ -108,6 +108,10 @@ session_start();
 							else {
 								echo("login");
 							}
+							
+							if (isset($_SESSION['type']) && $_SESSION['type'] == "Manager") {
+								echo(" <br> <a href='manager.php'> Manage Orders </a>");
+							}
 						?>
 					</a>
 
