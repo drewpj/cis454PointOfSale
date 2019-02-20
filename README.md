@@ -13,3 +13,8 @@ email: Johndoe@gmail.com
 password: thisisme
 
 
+## How to run
+The website is live, and can be accessed at http://ec2-3-95-168-218.compute-1.amazonaws.com/HomePage.php or http://3.95.168.218/HomePage.php
+
+The files are individually accessible (with last modified timestamps) at http://3.95.168.218/
+
