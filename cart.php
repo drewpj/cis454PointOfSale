@@ -113,11 +113,11 @@ $total should be updated using $price and i meant to be displayed.
 					<nav class="menu">
 						<ul class="main_menu">
 							<li>
-								<a href="HomePage.html">Home</a>
+								<a href="HomePage.php">Home</a>
 							</li>
 
 							<li>
-								<a href="product.html">Menu</a>
+								<a href="product.php">Menu</a>
 							</li>
 
 							<li>
