@@ -3,16 +3,12 @@
 	include_once 'include/db.php';
 	session_start();
 	
-	//$_SESSION['cart']
 	$amount = (float) $_SESSION['total'];
 	$items = $_SESSION['cart'];
 	$itemName = $_SESSION['prodName'];
 	$orderedBy = $_SESSION['email'];
 	
 	$nl = "\n";
-	
-	echo nl2br($amount . $nl . $items . $nl .$itemName . $nl);
-	
 	$name = $_POST['name'];
 	$familyname = $_POST['familyname'];
 	$email = $_POST['email'];
@@ -45,11 +41,6 @@
 		echo nl2br($charged);
 		$sql = "INSERT INTO dbo.IncomingOrder454 (product_name, product_price, product_seller ,orderedBy) VALUES ('$itemName',$amount,'LeBron','$email')";
 		$result = sqlsrv_query($conn, $sql);
-		if ($result) {
-			echo "success";
-		} else {
-			echo "failure";
-		}
 	} else {
 		echo nl2br("Processing card failed. Are you sure your information is correct?\n");
 	}
