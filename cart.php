@@ -117,7 +117,7 @@ $total should be updated using $price and i meant to be displayed.
 							</li>
 
 							<li>
-								<a href="product.php">Menu</a>
+								<a href="menu.php">Menu</a>
 							</li>
 
 							<li>
