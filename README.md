@@ -1,6 +1,9 @@
 # cis454PointOfSale
 Software Implementation Point of Sale System
 
+GitHub repo with the most up to date code: https://github.com/drewpj/cis454PointOfSale
+
+
 ## Creating a user, logging in, and manager account.
 In order to login to your account, press login on the top right of the page. Once in that page, you can enter your credentials, and be redirected to the homepage if succesful. 
 
