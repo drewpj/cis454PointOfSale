@@ -39,6 +39,7 @@ if (sqlsrv_has_rows($result)) {
     header("Location: ../HomePage.php?login=success");
 //Otherwise, say password or username error.
 } else {
+    //Error message if wrong password.
     $message = "Wrong password or username!";
     echo("<script type='text/javascript> alert($message); </script>");
 }
