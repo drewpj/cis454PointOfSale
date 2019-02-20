@@ -1,2 +1,13 @@
 # cis454PointOfSale
 Software Implementation Point of Sale System
+
+## Creating a user, logging in, and manager account.
+In order to login to your account, press login on the top right of the page. Once in that page, you can enter your credentials, and be redirected to the homepage if succesful. 
+
+If you don't have an account, press create account on the login page and enter in the required information. 
+
+If your account is flagged as a "Manager" type of account, you will have a special link on the top right called "Manage Orders". If you press that button, it will redirect you to a page that will allow the kitchen to see the incoming orders. For testing purposes, please use this manager account:
+email: Johndoe@gmail.com
+password: thisisme
+
+
